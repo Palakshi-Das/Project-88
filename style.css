@@ -1,0 +1,26 @@
+.body_background 
+{
+    background-position: center;
+    background-size:contain;
+	background:url(Grass.jpg);
+}
+#myCanvas
+{
+    border: 10px;
+	height: 500px;
+	margin: 50px;
+	margin-right: 990px;
+	text-align: center;
+    border-style:ridge;
+	background-color:forestgreen;
+}
+
+
+#hd3{
+	display: inline-block;
+	color: red;
+	background-color: aliceblue;
+	font-family: fantasy;
+	text-align: top;
+}
+
