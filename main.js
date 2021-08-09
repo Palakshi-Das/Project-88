@@ -10,10 +10,10 @@ block_image_width = 5;
 block_image_height = 5;
 
 function load_img(){
-	fabric.Image.fromURL("golf-h1.png", function(img) {
+	fabric.Image.fromURL("golf-h.png", function(Img) {
 		hole_obj = Img;
-		hole_obj.scaleToWidht(50);
-		hole_obj.scaleToWidht(50);
+		hole_obj.scaleToWidth(50);
+		hole_obj.scaleToHeight(50);
 		hole_obj.set({
 			top:hole_y,
 			left:hole_x
@@ -25,17 +25,17 @@ function load_img(){
 
 function new_image()
 {
-	fabric.Image.fromURL("ball.png",function(img) {
+	fabric.Image.fromURL("ball.png",function(Img) {
 		ball_obj = Img;
-		ball_obj.scaleToWidht(50);
-		ball_obj.scaleToWidht(50);
+		ball_obj.scaleToWidth(50);
+		ball_obj.scaleToHeight(50);
 		ball_obj.set({
-			top:hole_y,
-			left:hole_x
+			top:ball_y,
+			left:ball_x
 		});
 		canvas.add(ball_obj);
 	});
-	new_image();
+	
 }
 
 
@@ -83,6 +83,7 @@ function my_keydown(e)
 
             canvas.remove(ball_obj);
             new_image();
+			load_img();
         }
 	}
 
@@ -96,6 +97,7 @@ function my_keydown(e)
 			console.log("When down Arrow is pressed , X " + ball_x + "Y = "+ball_y);
 			canvas.remove(ball_obj);
 			new_image();
+			load_img();
 		} 
 	}
 
@@ -109,6 +111,7 @@ function my_keydown(e)
 
             canvas.remove(ball_obj);
             new_image();
+			load_img();
 		}
 	}
 
@@ -122,6 +125,7 @@ function my_keydown(e)
 
             canvas.remove(ball_obj);
             new_image();
+			load_img();
 		}
 	}
 	
